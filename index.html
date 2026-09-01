@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Recharge Offer Hub</title><meta name="theme-color" content="#7027c8">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand"><div class="brand-icon">₹</div><div><div class="brand-title">Recharge Offer Hub</div><div class="brand-sub">Fast • Secure • Simple</div></div></div>
+    <div class="top-actions"><button class="round">?</button><button class="round bell">♧<span></span></button></div>
+  </header>
+
+  <main>
+    <section class="offer-timer card-soft"><div class="timer-icon">◷</div><b>Special Offer Ends In</b><div class="timer" id="timer">14:27</div></section>
+
+    <section class="hero-banner">
+      <div class="spark s1">✦</div><div class="spark s2">✦</div><div class="spark s3">✧</div>
+      <div class="banner-logo"><span>₹</span> Recharge Offers</div>
+      <div class="banner-title">BEST SAVINGS OFFERS!</div>
+      <div class="banner-plans"><div><strong>₹199</strong><small>1.5GB/DAY</small><small>56 DAYS</small></div><div><strong>₹399</strong><small>2.5GB/DAY</small><small>200 DAYS</small></div><div><strong>₹499</strong><small>3GB/DAY</small><small>365 DAYS</small></div></div>
+      <div class="hot">HOT<br>DEAL!</div><div class="operators-mini"><b>Jio</b><b>Airtel</b><b>Vi</b><b>BSNL</b></div>
+    </section>
+
+    <section class="mobile-card card">
+      <div class="section-head"><div class="section-icon">▣</div><div><h2>Recharge your mobile</h2><p>Select operator and enter number</p></div><div class="secure">✓ SECURE</div></div>
+      <div class="label">Network provider</div>
+      <div class="operators" id="operators"></div>
+      <div class="label number-label">Mobile number</div>
+      <div class="number-box"><div class="country">+91</div><input id="mobile" type="tel" inputmode="numeric" maxlength="10" placeholder="00000 00000"><div class="contact">♙</div></div>
+      <button class="primary" id="rechargeBtn">Recharge Now <span>→</span></button>
+      <div class="trust"><span>♙ Protected</span><span>✦ Instant plans</span><span>✓ Verified</span></div>
+    </section>
+
+    <section id="plansSection" class="plans-section hidden"><div class="plans-title"><div><h2 id="plansHeading">Best plans for you</h2><p>Select a plan to continue</p></div><span>✦ SPECIAL</span></div><div id="plans"></div></section>
+  </main>
+</div>
+
+<div class="modal" id="qrModal"><div class="modal-box qr-box"><button class="close" data-close="qrModal">×</button><div class="modal-top"><div class="modal-icon">₹</div><div><h2>Complete Payment</h2><p id="qrOperator">Recharge payment</p></div></div><div class="pay-amount" id="qrAmount">₹499</div><div class="qr-wrap"><img id="qrImage" alt="Payment QR"></div><div class="pay-note">Scan this QR and pay the exact amount</div><div class="upi">UPI: <b>anmol.0625@ptyes</b></div><label class="upload"><input id="proof" type="file" accept="image/png,image/jpeg,image/webp"><span>📷 Upload Payment Screenshot</span><small id="fileName">PNG, JPG or WEBP • Max 5MB</small></label><button class="primary upload-btn" id="uploadBtn" disabled>Upload Screenshot</button><div class="demo-note">Demo mode: screenshot upload triggers the success message.</div></div></div>
+
+<div class="modal" id="successModal"><div class="modal-box success-box"><button class="close" data-close="successModal">×</button><div class="success-check">✓</div><h2>Recharge Successful</h2><p class="success-main">Your recharge has been submitted successfully.</p><div class="success-details"><div><span>Mobile Number</span><b id="successNumber">+91 00000 00000</b></div><div><span>Plan Amount</span><b id="successAmount">₹499</b></div></div><div class="within"><b>✓ Recharge will be completed within 10 minutes.</b><small>Please keep your phone available for confirmation.</small></div><button class="primary" data-close="successModal">Done</button></div></div>
+<script src="script.js"></script>
+</body></html>
